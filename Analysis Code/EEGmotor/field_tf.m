@@ -1,8 +1,8 @@
-function [tf]= field_tf(cond ,pb,subnum, label)
+function [tf]= field_tf(cond ,pb, label)
 
-for s=1:subnum
+for s=1:length(pb)
 
-    file=load(['TFA_VP' pb(s).name cond '.mat']);
+    file=load(['TFA_' pb{s} cond '.mat']);
     tf.label=label;
     tf.freq=file.freq;
     tf.time=file.times/1000;
