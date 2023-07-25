@@ -86,8 +86,7 @@ cfg.linewidth=2;
 ft_singleplotER(cfg, GA_sys_diff,GA_dys_diff); legend('systole', 'diastole')
 %%
 systole=NaN(1,subnum); distole=NaN(1,subnum);
-% inds=find(sig_sys{1}.time >=0 & sig_sys{1}.time <=1);
-inds=find(sig_sys{1}.time >=0.22 & sig_sys{1}.time <=0.522);
+inds=find(sig_sys{1}.time >=0.34 & sig_sys{1}.time <=0.454);
 
 for s=1:subnum
     systole(s)=mean(sig_sys{s}.avg(inds));
